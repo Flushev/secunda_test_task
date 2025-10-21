@@ -3,10 +3,10 @@ Create virtual env:
 * ```source venv/bin/activate```
 
 Make sure that MySql user have permission in target db:
-* ```GRANT ALL PRIVELEGES ON `target_database`.* TO 'user'@'localhost';```
+* ```GRANT ALL PRIVILEGES ON `target_database`.* TO 'user'@'%';```
 
-Make sure that MySql user have permission for working with test databases (need for unit tests):
-* ```GRANT ALL PRIVILEGES ON `test_secunda\_%`.* TO 'user'@'localhost';```
+Make sure that MySqk user have permission for working with test databases (need for unit tests):
+* ```GRANT ALL PRIVILEGES ON `test_secunda\_%`.* TO 'user'@'%';```
 
 Apply migrations (inside venv):
 * ```alembic upgrade head```
