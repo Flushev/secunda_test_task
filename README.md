@@ -21,6 +21,9 @@ To run in docker:
 * ```sudo docker build -t secunda_test .```
 * ```sudo docker run --rm -d -p 8000:8000 --env-file .env secunda_test```
 
+To access SWAGGER:
+* Connect to ```http://localhost:8000/docs```
+
 To run tests (inside venv):
 * ```pytest```
 
