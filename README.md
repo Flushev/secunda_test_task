@@ -8,12 +8,17 @@ Make sure that MySql user have permission in target db:
 Make sure that MySqk user have permission for working with test databases (need for unit tests):
 * ```GRANT ALL PRIVILEGES ON `test_secunda\_%`.* TO 'user'@'localhost';```
 
-Apply migrations:
+Apply migrations (inside venv):
 * ```alembic upgrade head```
 
-To run local (virtual env should be configured):
+To run local (inside venv):
 * ```python main.py```
 
 To run in docker:
 * ```sudo docker build -t secunda_test .```
 * ```sudo docker run --rm -d -p 8000:8000 --env-file .env secunda_test```
+
+To run tests (inside venv):
+* ```pytest```
+
+Project have 94% coverage
