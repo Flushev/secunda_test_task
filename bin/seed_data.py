@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+_ROOT = Path(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
 from typing import Dict, List, Tuple
 
 from dotenv import load_dotenv
@@ -16,6 +23,7 @@ from app.crud.organization import organization_crud
 from app.model.activity import Activity
 from app.model.building import Building
 from app.model.organization import Organization
+
 
 
 load_dotenv()
