@@ -11,6 +11,9 @@ Make sure that MySqk user have permission for working with test databases (need 
 Apply migrations (inside venv):
 * ```alembic upgrade head```
 
+Create test data (inside venv):
+* ```python bin/seed_data.py```
+
 To run local (inside venv):
 * ```python main.py```
 
